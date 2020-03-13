@@ -2,11 +2,11 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 //pode ser uma action
-function addCourseAction(title) {
+const addCourseAction = title => {
   return { type: 'ADD_COURSE', title }
 }
 
-export default function CourseList() {
+const CourseList = () => {
   const courses = useSelector(state => state.data)
   const dispatch = useDispatch()
 
@@ -26,3 +26,5 @@ export default function CourseList() {
     </>
   )
 }
+
+export default CourseList
